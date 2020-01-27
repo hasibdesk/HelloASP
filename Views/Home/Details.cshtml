@@ -1,0 +1,26 @@
+﻿@model HelloASP.Models.Restaurant
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+    <div>
+        @if (Model == null)
+        {
+            <h2>No restaurant found with that id</h2>
+        }
+        else
+        {
+           
+            <h1>@Model.Name</h1>
+            <p>Id: @Model.Id</p>
+            <p>Id: @Model.Cuisine</p>
+            <a asp-action="Index" asp-controller="Home">Home</a>
+        }
+
+    </div>
+</body>
+</html>
